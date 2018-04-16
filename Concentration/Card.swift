@@ -11,18 +11,32 @@ import Foundation
 struct Card {
     var isFaceUp = false
     var isMatched = false
+    var hasFlippedAtLeastOnce = false
     var identifier: Int
+    var emoji: String
     
-    static var identifierFactory = 0
+    private static let emojis = Emojis()
+    private static var emojiChoices = emojis.randomTheme
+    private static var emojiDict = [Int:String]()
+    private static var identifierFactory = 0
     
-    // attached to type not Card
-    static func getUniqueIdentifier() -> Int {
+    // `static`: attached to type not Card
+    private static func getUniqueIdentifier() -> Int {
         identifierFactory += 1
         return identifierFactory
     }
     
+    private static func getEmoji(for identifier: Int) -> String {
+        if Card.emojiDict[identifier] == nil, Card.emojiChoices.count > 0 {
+            let randomIndex = Int(arc4random_uniform(UInt32(Card.emojiChoices.count)))
+            Card.emojiDict[identifier] = Card.emojiChoices.remove(at: randomIndex) // returns what it removes
+        }
+        return Card.emojiDict[identifier] ?? "?"
+    }
+    
     init() {
         self.identifier = Card.getUniqueIdentifier()
+        self.emoji = Card.getEmoji(for: self.identifier)
     }
 }
 
