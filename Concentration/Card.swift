@@ -29,7 +29,8 @@ struct Card {
     private static func getEmoji(for identifier: Int) -> String {
         if Card.emojiDict[identifier] == nil, Card.emojiChoices.count > 0 {
             let randomIndex = Int(arc4random_uniform(UInt32(Card.emojiChoices.count)))
-            Card.emojiDict[identifier] = Card.emojiChoices.remove(at: randomIndex) // returns what it removes
+            let randomStringIndex = Card.emojiChoices.index(Card.emojiChoices.startIndex, offsetBy: randomIndex)
+            Card.emojiDict[identifier] = String(Card.emojiChoices.remove(at: randomStringIndex)) // returns what it removes
         }
         return Card.emojiDict[identifier] ?? "?"
     }

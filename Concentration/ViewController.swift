@@ -32,8 +32,7 @@ class ViewController: UIViewController {
     // FIXME: when startNewGame is fired
     // some of the squares have no emoji
     @IBAction private func startNewGame(_ sender: UIButton) {
-//        game.startNewGame(with: numberOfPairsOfCards)
-        game = Concentration(with: numberOfPairsOfCards)
+        game.startNewGame(with: numberOfPairsOfCards)
         updateViewFromModel()
     }
     
