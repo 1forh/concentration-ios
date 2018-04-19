@@ -50,6 +50,7 @@
 		0352928A207C53A400F7B825 /* ConcentrationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcentrationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0352928E207C53A400F7B825 /* ConcentrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationUITests.swift; sourceTree = "<group>"; };
 		03529290207C53A400F7B825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0377CD0720881F6D003D074F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		03D647942080574B00C254E7 /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
 		03E9CF84207DA73E00891A43 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		03E9CF86207DA7D900891A43 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		03529262207C53A300F7B825 = {
 			isa = PBXGroup;
 			children = (
+				0377CD0720881F6D003D074F /* README.md */,
 				0352926D207C53A300F7B825 /* Concentration */,
 				03529282207C53A400F7B825 /* ConcentrationTests */,
 				0352928D207C53A400F7B825 /* ConcentrationUITests */,
